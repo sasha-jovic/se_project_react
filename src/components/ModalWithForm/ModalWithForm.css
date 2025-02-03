@@ -1,0 +1,158 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0000004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  font-family: "cabinet grotesk";
+  width: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.modal_opened {
+  visibility: visible;
+}
+
+.modal__title {
+  margin: 0;
+  font-family: "cabinet grotesk";
+  width: 700;
+  font-size: 16px;
+  line-height: 20px;
+  width: 95px;
+  height: 20px;
+}
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background-image: url("/src/assets/images/gray-cross.svg");
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: blue;
+}
+.modal__close_preview {
+  background-image: url("/src/assets/images/close-btn.svg");
+}
+.modal__content {
+  background-color: white;
+  position: relative;
+  padding: 28px 28px 36px;
+  max-width: 496px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.modal__content_type_image {
+  padding: 0;
+  max-width: fit-content;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  max-height: 335px;
+}
+.modal__input {
+  display: block;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+  padding-bottom: 4px;
+}
+.modal__radio-buttons {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.modal__submit {
+  width: 124px;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: gray;
+  opacity: 70%;
+}
+.modal__radio-input {
+  background-color: black;
+  margin-right: 10px;
+}
+.modal__label {
+  padding-top: 15px;
+}
+.modal__legend {
+  padding-top: 20px;
+}
+
+.modal__label-type-radio {
+  padding-bottom: 40px;
+  padding-left: 10px;
+}
+.modal__image {
+  width: 498px;
+  height: 498px;
+  display: block;
+}
+
+.modal__footer {
+  padding: 20px 32px 32px;
+}
+
+.modal__caption {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: "cabinet grotesk";
+  width: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.modal__weather {
+  margin: 0;
+  font-family: "cabinet grotesk";
+  width: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 627px) {
+  .modal {
+    padding: 0;
+  }
+  .modal {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .modal__image {
+    max-width: fit-content;
+    width: 100%;
+    height: auto;
+  }
+  .modal__content {
+    max-width: fit-content;
+  }
+  .modal__footer {
+    max-height: 50px;
+  }
+  .modal__close {
+  }
+}
