@@ -9,6 +9,7 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import Footer from "../Footer/footer";
+import "../itemCard/itemCard";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
