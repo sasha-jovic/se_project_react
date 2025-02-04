@@ -12,19 +12,15 @@ function Main({ weatherData, handleCardClick }) {
           Today is {weatherData.temp.F} &deg; F / You may want to wear:
         </p>
         <div className="cards__list">
-          {defaultClothingItems
-            // .filter((item) => {
-            //   return item.weather === weatherData.type;
-            // })
-            .map((item, index) => {
-              return (
-                <ItemCard
-                  key={index}
-                  item={item}
-                  onCardClick={handleCardClick}
-                />
-              );
-            })}
+          {defaultClothingItems.map((item, index) => {
+            return (
+              <ItemCard
+                key={item._id}
+                item={item}
+                onCardClick={handleCardClick}
+              />
+            );
+          })}
         </div>
       </section>
     </main>

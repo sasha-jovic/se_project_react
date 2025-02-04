@@ -38,6 +38,14 @@ function App() {
       })
       .catch(console.error);
   }, []);
+
+  const [weather, setWeather] = useState("");
+
+  const handleWeatherChange = (e) => {
+    console.log(e.target.value);
+    setWeather(e.target.value);
+  };
+
   return (
     <div className="page">
       <div className="page__content">
@@ -50,6 +58,7 @@ function App() {
         buttonText="Add garment"
         activeModal={activeModal}
         onClose={closeActiveModal}
+        isOpened={activeModal === "add-garment"}
       >
         <label htmlFor="name" className="modal__label">
           Name{" "}
@@ -65,7 +74,7 @@ function App() {
           <input
             type="url"
             className="modal__input"
-            id="name"
+            id="imageUrl"
             placeholder="ImageURL"
           />
         </label>
@@ -73,7 +82,14 @@ function App() {
           <legend className="modal__legend">Select the weather type:</legend>
 
           <label htmlFor="hot" className="modal__label modal__label_type_radio">
-            <input id="cold" type="radio" className="modal__radio-input" />
+            <input
+              id="hot"
+              type="radio"
+              className="modal__radio-input"
+              value="hot"
+              name="weatherType"
+              onChange={handleWeatherChange}
+            />
             Hot
           </label>
 
@@ -81,7 +97,14 @@ function App() {
             htmlFor="warm"
             className="modal__label modal__label_type_radio"
           >
-            <input id="cold" type="radio" className="modal__radio-input" />
+            <input
+              id="warm"
+              type="radio"
+              className="modal__radio-input"
+              value="warm"
+              name="weatherType"
+              onChange={handleWeatherChange}
+            />
             Warm
           </label>
 
@@ -89,7 +112,14 @@ function App() {
             htmlFor="cold"
             className="modal__label modal__label_type_radio"
           >
-            <input id="cold" type="radio" className="modal__radio-input" />
+            <input
+              id="cold"
+              type="radio"
+              className="modal__radio-input"
+              value="cold"
+              name="weatherType"
+              onChange={handleWeatherChange}
+            />
             Cold
           </label>
         </fieldset>
